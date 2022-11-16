@@ -15,3 +15,5 @@ Cowabunga!!! (Laurentello)
 Je suis bien là ! (Nicolas)
 
 1er test qais OK
+
+Yann a rejoint l'équipe !
