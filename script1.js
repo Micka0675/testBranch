@@ -115,44 +115,60 @@ function exo3(){
 }
 
 function exo4(){
-    var multiplicateur;
+    var multiplicateur=0;
     var numerateur;
     var produit;
-    var restart = 'o';
-    
-   
-    for(multiplicateur=1; multiplicateur<11; multiplicateur++)
+    var inputC = document.createElement("input");
+    var h2 = document.createElement("h2");
+
+    function addTable()
     {
-        while(restart!='n')
-        {
-            for(numerateur=1; numerateur<11; numerateur++)
+        multiplicateur++
+        h2;
+        h2.innerText="Table de " + multiplicateur;
+        document.body.appendChild(h2);
+        for(numerateur=1; numerateur<11; numerateur++)
             {
                 produit = numerateur * multiplicateur;
                 // alert(numerateur + "x " +   multiplicateur + "= "  + produit);
                 var affichage = document.createElement("p");
                 affichage.innerText = multiplicateur + "x " + numerateur + "= "  + produit;
                 document.body.appendChild(affichage);
-                restart='n';
+                
             }
-            affichage;
-            affichage.innerText="Pour arrêtre le programme saisir 'n'";
-            var inputC = document.createElement("input");
-            document.body.appendChild(inputC);
-            inputC.setAttribute("id", "saisieUser")
-            var saisieUser = document.getElementById("saisieUser");
-            saisieUser.addEventListener("keydown", function()
-            {
-                if(saisieUser.value=='n')
-                {
-                    restart='n';
-                }
-                else
-                {restart='o';}
-            })
+    }
+
+
+    inputC;
+    inputC.setAttribute("type", "button");
+    inputC.value ="start";
+    inputC.id = "input1"
+    document.body.appendChild(inputC);
+   
+    inputC.addEventListener("click", addTable);
+
+    // for(multiplicateur=1; multiplicateur<11; multiplicateur++)
+    // {
+        // while(restart!='n')
+        // {
+            
+        
+            // saisieUser.addEventListener("keyup", function()
+            // {
+            //     if(saisieUser.value=='n')
+            //     {
+            //         console.log(saisieUser.value);
+            //         restart='n';
+            //         console.log(restart);
+            //     }
+            //     else
+            //     {restart='o';}
+            //     console.log(restart);
+            // })
             
             // restart = prompt("Appuyez sur n pour interrompre l'affichage");
-        }
-    }
+    //     }
+    // }
 }
 
 
