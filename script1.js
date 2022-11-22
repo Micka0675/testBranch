@@ -122,17 +122,20 @@ function exo4(){
 
     for(multiplicateur=1; multiplicateur<11; multiplicateur++)
     {
-        while(restart!='n')
+        for(numerateur=1; numerateur<11; numerateur++)
         {
-
-            for(numerateur=1; numerateur<11; numerateur++)
-            {
-                produit = numerateur * multiplicateur;
-                document.write("<p>"+numerateur + " x " +   multiplicateur + " = "  + produit+"</p>");
-            }
-
-            restart = prompt("Appuyez sur n pour interrompre l'affichage");
+           produit = numerateur * multiplicateur;
+           document.write("<p>"+numerateur + " x " +   multiplicateur + " = "  + produit+"</p>");
         }
+
+        if (iTable < 10)
+        {
+           continuer = prompt("Faire c pour continuer");
+        }
+        while (continuer != "c")
+        {
+            continuer = prompt("Faire c pour continuer");
+        }   
     }
 }
 
