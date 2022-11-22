@@ -128,7 +128,7 @@ function exo4(){
             for(numerateur=1; numerateur<11; numerateur++)
             {
                 produit = numerateur * multiplicateur;
-                alert(numerateur + "x " +   multiplicateur + "= "  + produit);
+                parseInt(prompt(numerateur + "x " +   multiplicateur + "= "  + produit));
             }
 
             restart = prompt("Appuyez sur n pour interrompre l'affichage");
