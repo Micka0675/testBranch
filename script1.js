@@ -60,31 +60,48 @@ function exo1(){
 }
 
 function exo2(){
-    var valUtil = parseFloat(prompt('Veuillez entrer une valeur'));
+    document.getElementById('exo2').innerHTML = "<input id=\"choice\" type=\"number\">";
+    var results =[];
+    var valPlace = document.getElementById('choice');
+    // var valUtil = valPlace.value;
+    var min;
+    var max;
     var nbreSaisies = 0;
-    var min=valUtil;
-    var max=valUtil;
     var somme = 0;
 
-    while(valUtil!=0)
+    valPlace.addEventListener('keyup',function staaart(e){
+    var valUtil = valPlace.value;
+    if(e.key != '0')
     {
-        nbreSaisies++;
-        if(valUtil<min)
+        if(e.key === 'Enter' || e.key === 13)
         {
-            min = valUtil;  
-        }
-        else
-        {
-            if(valUtil > max || max == null)
+            results.push(valUtil);
+            nbreSaisies++;
+            if(valUtil < parseFloat(min) || min == undefined || min == null)
+            {
+                min = valUtil;  
+            }
+            if(valUtil > parseFloat(max) || max == undefined || max == null)
             {
                 max = valUtil;
             }
+            document.getElementById('choice').value = "";
         }
-        somme = somme + valUtil;
-        valUtil = parseFloat(prompt('Veuillez entrer une valeur'));
     }
-    var moyenne = somme / nbreSaisies;
-    alert('Compris entre '+min+' et '+max+'Pour une moyenne de '+moyenne+' Au revoir!');
+    else
+    {
+        for(i = 0; i < results.length; i++)
+            {
+                somme = somme + parseFloat(results[i]);
+                console.log("resultats enregistrés: "+results[i]);
+            }
+            console.log("Dernière note: "+valUtil+" Total: "+somme);
+        var moyenne = somme / nbreSaisies;
+        document.getElementById('exo2').innerHTML = '<p>Compris entre '+min+' et '+max+' pour une moyenne de '+moyenne;
+    
+    }
+});
+    
 }
 
 function exo3(){
