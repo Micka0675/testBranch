@@ -3,10 +3,11 @@ var numerateur;
 var produit;
 var restart = 'o';
 
-while(restart!='n')
+for(multiplicateur=1; multiplicateur<11; multiplicateur++)
 {
-    for(multiplicateur=1; multiplicateur<11; multiplicateur++)
+    while(restart!='n')
     {
+ 
         for(numerateur=1; numerateur<11; numerateur++)
         {
             produit = numerateur * multiplicateur;
