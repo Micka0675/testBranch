@@ -118,7 +118,7 @@ function exo4(){
     var multiplicateur;
     var numerateur;
     var produit;
-    var restart = 'o';
+    var restart;
 
     for(multiplicateur=1; multiplicateur<11; multiplicateur++)
     {
@@ -128,13 +128,13 @@ function exo4(){
            document.write("<p>"+numerateur + " x " +   multiplicateur + " = "  + produit+"</p>");
         }
 
-        if (iTable < 10)
+        if (numerateur < 10)
         {
-           continuer = prompt("Faire c pour continuer");
+          restart = prompt("Faire o pour continuer, autre touche pour arreter");
         }
-        while (continuer != "c")
+        while (restart != "o")
         {
-            continuer = prompt("Faire c pour continuer");
+           restart = prompt("Faire o pour continuer, autre touche pour arreter");
         }   
     }
 }
