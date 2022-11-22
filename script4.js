@@ -13,6 +13,6 @@ while(restart!='n')
             alert(numerateur + "x " +   multiplicateur + "= "  + produit);
         }
 
-        restart = prompt("Appuyez sur n pour interrompre l'affichage")
+        restart = prompt("Appuyez sur n pour interrompre l'affichage");
     }
 }
