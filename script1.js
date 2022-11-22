@@ -127,14 +127,14 @@ function exo4(){
         h2;
         h2.innerText="Table de " + multiplicateur;
         document.body.appendChild(h2);
+
         for(numerateur=1; numerateur<11; numerateur++)
             {
                 produit = numerateur * multiplicateur;
-                // alert(numerateur + "x " +   multiplicateur + "= "  + produit);
+
                 var affichage = document.createElement("p");
                 affichage.innerText = multiplicateur + "x " + numerateur + "= "  + produit;
-                document.body.appendChild(affichage);
-                
+                document.body.appendChild(affichage);               
             }
     }
 
@@ -146,29 +146,6 @@ function exo4(){
     document.body.appendChild(inputC);
    
     inputC.addEventListener("click", addTable);
-
-    // for(multiplicateur=1; multiplicateur<11; multiplicateur++)
-    // {
-        // while(restart!='n')
-        // {
-            
-        
-            // saisieUser.addEventListener("keyup", function()
-            // {
-            //     if(saisieUser.value=='n')
-            //     {
-            //         console.log(saisieUser.value);
-            //         restart='n';
-            //         console.log(restart);
-            //     }
-            //     else
-            //     {restart='o';}
-            //     console.log(restart);
-            // })
-            
-            // restart = prompt("Appuyez sur n pour interrompre l'affichage");
-    //     }
-    // }
 }
 
 
