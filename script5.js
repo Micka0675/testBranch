@@ -10,7 +10,7 @@ while (cRep === "o")
 	{
 		for (nRepere = 1; nRepere <= nNombre; nRepere ++)
 		{
-			nFact *= nRepere;
+			parseFloat(nFact *= nRepere);
 		}
 		document.write("<p>La factorielle de "+ nNombre +" est donc : "+ nFact +"</p>");
 	}
