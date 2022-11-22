@@ -1,4 +1,3 @@
-var text = document.getElementById("test");
 var age;
 var restart = 'o';
 
@@ -21,5 +20,5 @@ while (restart!='n')
         alert("Programme réservé aux personnes non-retraitées");
     }
 
-    restart =prompt("Voulez-vous recommmencer  ? o/n  ")
+    restart = prompt("Voulez-vous recommmencer  ? o/n  ")
 }
