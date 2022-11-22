@@ -123,7 +123,7 @@ function exo4(){
 
     function addTable()
     {
-        multiplicateur++
+        multiplicateur++;
         h2;
         h2.innerText="Table de " + multiplicateur;
         document.body.appendChild(h2);
@@ -142,7 +142,7 @@ function exo4(){
     inputC;
     inputC.setAttribute("type", "button");
     inputC.value ="start";
-    inputC.id = "input1"
+    inputC.id = "input1";
     document.body.appendChild(inputC);
    
     inputC.addEventListener("click", addTable);
