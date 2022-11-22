@@ -128,7 +128,7 @@ function exo4(){
             for(numerateur=1; numerateur<11; numerateur++)
             {
                 produit = numerateur * multiplicateur;
-                document.write(numerateur + " x " +   multiplicateur + " = "  + produit);
+                document.write("<p>"+numerateur + " x " +   multiplicateur + " = "  + produit+"</p>");
             }
 
             restart = prompt("Appuyez sur n pour interrompre l'affichage");
