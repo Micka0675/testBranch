@@ -1,8 +1,8 @@
-valUtil = parseFloat(prompt('Veuillez entrer une valeur'));
-nbreSaisies = 0;
-min=null;
-max=null;
-somme = 0;
+var valUtil = parseFloat(prompt('Veuillez entrer une valeur'));
+var nbreSaisies = 0;
+var min=null;
+var max=null;
+var somme = 0;
 while(valUtil!=0)
 {
     nbreSaisies++;
@@ -20,5 +20,5 @@ while(valUtil!=0)
     somme = somme + valUtil;
     valUtil = parseFloat(prompt('Veuillez entrer une valeur'));
 }
-moyenne = somme / nbreSaisies;
+var moyenne = somme / nbreSaisies;
 alert('Compris entre '+min+' et '+max+'Pour une moyenne de '+moyenne+' Au revoir!');
