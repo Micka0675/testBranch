@@ -120,7 +120,7 @@ function exo4(){
     var produit;
     var restart = 'o';
     
-    
+   
     for(multiplicateur=1; multiplicateur<11; multiplicateur++)
     {
         while(restart!='n')
@@ -131,13 +131,30 @@ function exo4(){
                 // alert(numerateur + "x " +   multiplicateur + "= "  + produit);
                 var affichage = document.createElement("p");
                 affichage.innerText = multiplicateur + "x " + numerateur + "= "  + produit;
-                document.body.appendChild(affichage );
+                document.body.appendChild(affichage);
+                restart='n';
             }
-    
-            restart = prompt("Appuyez sur n pour interrompre l'affichage");
+            affichage;
+            affichage.innerText="Pour arrêtre le programme saisir 'n'";
+            var inputC = document.createElement("input");
+            document.body.appendChild(inputC);
+            inputC.setAttribute("id", "saisieUser")
+            var saisieUser = document.getElementById("saisieUser");
+            saisieUser.addEventListener("keydown", function()
+            {
+                if(saisieUser.value=='n')
+                {
+                    restart='n';
+                }
+                else
+                {restart='o';}
+            })
+            
+            // restart = prompt("Appuyez sur n pour interrompre l'affichage");
         }
     }
 }
+
 
 function exo5(){
     var nNombre;
