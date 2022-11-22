@@ -118,24 +118,24 @@ function exo4(){
     var multiplicateur;
     var numerateur;
     var produit;
-    var restart;
-
+    var restart = 'o';
+    
+    
     for(multiplicateur=1; multiplicateur<11; multiplicateur++)
     {
-        for(numerateur=1; numerateur<11; numerateur++)
+        while(restart!='n')
         {
-           produit = numerateur * multiplicateur;
-           document.write("<p>"+numerateur + " x " +   multiplicateur + " = "  + produit+"</p>");
+            for(numerateur=1; numerateur<11; numerateur++)
+            {
+                produit = numerateur * multiplicateur;
+                // alert(numerateur + "x " +   multiplicateur + "= "  + produit);
+                var affichage = document.createElement("p");
+                affichage.innerText = multiplicateur + "x " + numerateur + "= "  + produit;
+                document.body.appendChild(affichage );
+            }
+    
+            restart = prompt("Appuyez sur n pour interrompre l'affichage");
         }
-
-        if (numerateur < 10)
-        {
-          restart = prompt("Faire o pour continuer, autre touche pour arreter");
-        }
-        while (restart != "o")
-        {
-           restart = prompt("Faire o pour continuer, autre touche pour arreter");
-        }   
     }
 }
 
