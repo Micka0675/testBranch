@@ -28,8 +28,8 @@ while (cRep === "o")
 	cRep = prompt("Voulez-vous recommencer (o/n) ?");
 }
 
-while (cRep != "o" && cRep != "n")
-{
-	alert("Rentrez un caractère valide");
-	cRep = prompt("Voulez-vous recommencer (o/n) ?");
-}
+// while (cRep != "o" && cRep != "n")
+// {
+// 	alert("Rentrez un caractère valide");
+// 	cRep = prompt("Voulez-vous recommencer (o/n) ?");
+// }
