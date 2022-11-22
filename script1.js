@@ -119,12 +119,11 @@ function exo4(){
     var numerateur;
     var produit;
     var inputC = document.createElement("input");
-    var h2 = document.createElement("h2");
 
     function addTable()
     {
         multiplicateur++;
-        h2;
+        var h2 = document.createElement("h2");
         h2.innerText="Table de " + multiplicateur;
         document.body.appendChild(h2);
 
@@ -137,7 +136,6 @@ function exo4(){
                 document.body.appendChild(affichage);               
             }
     }
-
 
     inputC;
     inputC.setAttribute("type", "button");
